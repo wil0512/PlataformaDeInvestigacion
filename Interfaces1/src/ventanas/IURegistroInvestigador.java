@@ -276,12 +276,12 @@ public class IURegistroInvestigador extends javax.swing.JFrame {
     if(nombres.isEmpty()||apellidos.isEmpty()||email.isEmpty()||nomusuario.isEmpty()||clave.isEmpty()||clave2.isEmpty()) 
     {
         JOptionPane.showMessageDialog(null, "faltan datos");
-        if(nombres.isEmpty()) {jLabelNombre.setText("Nombre(*)"); jLabelNombre.setForeground(Color.red);}
-        if(apellidos.isEmpty()) {jLabelApellido.setText("Apellidos(*)"); jLabelApellido.setForeground(Color.red);}
-        if(email.isEmpty()) {jLabelEmail.setText("Email(*)"); jLabelEmail.setForeground(Color.red);}
-        if(nomusuario.isEmpty()) {jLabelUsuario.setText("Usuario(*)"); jLabelUsuario.setForeground(Color.red);}
-        if(clave.isEmpty()) {jLabelContraseña.setText("Contraceña(*)"); jLabelContraseña.setForeground(Color.red);}
-        if(clave2.isEmpty()) {jLabelConfContraseña.setText("Confirmar Contraseña(*)"); jLabelConfContraseña.setForeground(Color.red);}
+        if(nombres.isEmpty()) {jLabelNombre.setText("Nombre(*)"); jLabelNombre.setForeground(Color.red);}else{jLabelNombre.setText("Nombre"); jLabelNombre.setForeground(Color.blue);}
+        if(apellidos.isEmpty()) {jLabelApellido.setText("Apellidos(*)"); jLabelApellido.setForeground(Color.red);}else{jLabelApellido.setText("Apellidos"); jLabelApellido.setForeground(Color.blue);}
+        if(email.isEmpty()) {jLabelEmail.setText("Email(*)"); jLabelEmail.setForeground(Color.red);}else{jLabelEmail.setText("Email"); jLabelEmail.setForeground(Color.blue);}
+        if(nomusuario.isEmpty()) {jLabelUsuario.setText("Usuario(*)"); jLabelUsuario.setForeground(Color.red);}else{jLabelUsuario.setText("Usuario"); jLabelUsuario.setForeground(Color.blue);}
+        if(clave.isEmpty()) {jLabelContraseña.setText("Contraseña(*)"); jLabelContraseña.setForeground(Color.red);}else{jLabelContraseña.setText("Contraseña"); jLabelContraseña.setForeground(Color.blue);}
+        if(clave2.isEmpty()) {jLabelConfContraseña.setText("Confirmar Contraseña(*)"); jLabelConfContraseña.setForeground(Color.red);}else{jLabelConfContraseña.setText("Confirmar Contraseña"); jLabelConfContraseña.setForeground(Color.blue);}
         
     }
     else
