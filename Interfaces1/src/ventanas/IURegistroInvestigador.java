@@ -5,6 +5,7 @@
  */
 package ventanas;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -50,7 +51,6 @@ public class IURegistroInvestigador extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jButtonAceptar = new javax.swing.JButton();
-        jScrollBar1 = new javax.swing.JScrollBar();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -245,7 +245,6 @@ public class IURegistroInvestigador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, 160, 40));
-        getContentPane().add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, -1, 480));
 
         jLabelFondo.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagen-suave-con-swooshes-fondo-abstracto_91-6107 (1).jpg"))); // NOI18N
@@ -274,9 +273,16 @@ public class IURegistroInvestigador extends javax.swing.JFrame {
     String nomusuario=jTextFieldNombreUsuario.getText();
     String clave=jPasswordField1.getText();
     String clave2=jPasswordField2.getText();
-    if(nombres.isEmpty()&&apellidos.isEmpty()||email.isEmpty()||nomusuario.isEmpty()||clave.isEmpty()||clave2.isEmpty()) 
+    if(nombres.isEmpty()||apellidos.isEmpty()||email.isEmpty()||nomusuario.isEmpty()||clave.isEmpty()||clave2.isEmpty()) 
     {
         JOptionPane.showMessageDialog(null, "faltan datos");
+        if(nombres.isEmpty()) {jLabelNombre.setText("Nombre(*)"); jLabelNombre.setForeground(Color.red);}
+        if(apellidos.isEmpty()) {jLabelApellido.setText("Apellidos(*)"); jLabelApellido.setForeground(Color.red);}
+        if(email.isEmpty()) {jLabelEmail.setText("Email(*)"); jLabelEmail.setForeground(Color.red);}
+        if(nomusuario.isEmpty()) {jLabelUsuario.setText("Usuario(*)"); jLabelUsuario.setForeground(Color.red);}
+        if(clave.isEmpty()) {jLabelContraseña.setText("Contraceña(*)"); jLabelContraseña.setForeground(Color.red);}
+        if(clave2.isEmpty()) {jLabelConfContraseña.setText("Confirmar Contraseña(*)"); jLabelConfContraseña.setForeground(Color.red);}
+        
     }
     else
     {
@@ -347,7 +353,6 @@ public class IURegistroInvestigador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JTextField jTextFieldApellidos;
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldNombre;
