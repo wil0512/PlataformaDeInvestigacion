@@ -1,14 +1,9 @@
-package INTERFACES;
+package org.umss.view;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
- * @author Alvaro pereira
+ * @author Legolas
  */
 public class REGISTRO extends javax.swing.JFrame {
 
@@ -158,8 +153,8 @@ public class REGISTRO extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    Desarollo_Sprint pi = new Desarollo_Sprint();
-      pi.setVisible(true);
+    //Desarollo_Sprint pi = new Desarollo_Sprint();
+     // pi.setVisible(true);
       dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
