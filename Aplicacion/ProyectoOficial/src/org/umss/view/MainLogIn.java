@@ -28,7 +28,7 @@ import javax.swing.JOptionPane;
 import org.umss.controller.BD;
 import org.umss.model.Usuario;
 
-public class LogIn extends JFrame {
+public class MainLogIn extends JFrame {
 
     private JTextField nameField;
     
@@ -41,7 +41,7 @@ public class LogIn extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    LogIn frame = new LogIn();
+                    MainLogIn frame = new MainLogIn();
                     
                     frame.setVisible(true);
                 } catch (Exception e) {
@@ -54,12 +54,12 @@ public class LogIn extends JFrame {
     /**
      * Create the frame.
      */
-    public LogIn() {
+    public MainLogIn() {
         try {
             consulta = new BD();
             System.out.println("CONEXION SATISFACTORIA");
         } catch (SQLException ex) {
-            Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MainLogIn.class.getName()).log(Level.SEVERE, null, ex);
         }
         setTitle("SCT LOG IN");
         setResizable(false);
@@ -96,6 +96,8 @@ public class LogIn extends JFrame {
         btnOk.setBackground(new Color(245, 245, 245));
         btnOk.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
+                menuPrincipal obj = new menuPrincipal();
+                obj.setVisible(true);
                 log();
             }
         });
@@ -172,7 +174,7 @@ public class LogIn extends JFrame {
     }*/
     
     public static void main(String [] args){
-        LogIn.init();
+        MainLogIn.init();
         
     }
 }

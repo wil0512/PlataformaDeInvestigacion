@@ -9,14 +9,14 @@ package org.umss.view;
  *
  * @author gorge
  */
-public class menuprincipal extends javax.swing.JFrame {
+public class menuPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form menuprincipal
      */
-    public menuprincipal() {
+    public menuPrincipal() {
         initComponents();
-        this.setExtendedState(menuprincipal.MAXIMIZED_BOTH);  // maximiza la pantalla
+        this.setExtendedState(menuPrincipal.MAXIMIZED_BOTH);  // maximiza la pantalla
         this.setTitle("Gestor de ensayos - UMSS"); // pone el titulo a la  ventana
     }
 
@@ -39,6 +39,7 @@ public class menuprincipal extends javax.swing.JFrame {
         contentMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         mnuayuda = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -79,6 +80,11 @@ public class menuprincipal extends javax.swing.JFrame {
         contentMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/umss/img/if_To_do_list_131719.png"))); // NOI18N
         contentMenuItem.setMnemonic('c');
         contentMenuItem.setText("Aceptados");
+        contentMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contentMenuItemActionPerformed(evt);
+            }
+        });
         mnuensayos.add(contentMenuItem);
 
         aboutMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
@@ -96,6 +102,18 @@ public class menuprincipal extends javax.swing.JFrame {
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/umss/img/busqueda-de-archivos-de-documentos-zoom-vista-previa-de-icono-4373-32.png"))); // NOI18N
         jMenuItem1.setText("Observados");
         mnuensayos.add(jMenuItem1);
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/umss/img/documentos-de-hdd-icono-7371-32.png"))); // NOI18N
+        jMenuItem4.setText("SubirEnsayo");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        mnuensayos.add(jMenuItem4);
+        jMenuItem4.getAccessibleContext().setAccessibleName("SubirEnsayo");
+        jMenuItem4.getAccessibleContext().setAccessibleDescription("");
 
         menuBar.add(mnuensayos);
 
@@ -138,6 +156,17 @@ public class menuprincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_aboutMenuItemActionPerformed
 
+    private void contentMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contentMenuItemActionPerformed
+        ListaComisionRevisora obj = new ListaComisionRevisora();
+        obj.setVisible(true);
+        
+    }//GEN-LAST:event_contentMenuItemActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        subirEnsayo obj = new subirEnsayo();
+        obj.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -155,20 +184,21 @@ public class menuprincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(menuprincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(menuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(menuprincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(menuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(menuprincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(menuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(menuprincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(menuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new menuprincipal().setVisible(true);
+                new menuPrincipal().setVisible(true);
             }
         });
     }
@@ -180,6 +210,7 @@ public class menuprincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu mnuayuda;
     private javax.swing.JMenu mnuensayos;
