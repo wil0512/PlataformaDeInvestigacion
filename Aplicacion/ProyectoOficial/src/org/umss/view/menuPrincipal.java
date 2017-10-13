@@ -40,6 +40,12 @@ public class menuPrincipal extends javax.swing.JFrame {
         aboutMenuItem = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        mnuusuariosregistrados1 = new javax.swing.JMenu();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem3 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem4 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem5 = new javax.swing.JCheckBoxMenuItem();
         mnuayuda = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -115,6 +121,32 @@ public class menuPrincipal extends javax.swing.JFrame {
         jMenuItem4.getAccessibleContext().setAccessibleDescription("");
 
         menuBar.add(mnuensayos);
+
+        mnuusuariosregistrados1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/umss/img/if_Work_area_131767.png"))); // NOI18N
+        mnuusuariosregistrados1.setMnemonic('e');
+        mnuusuariosregistrados1.setText("Cursos Disponibles");
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("Comercio Exterior");
+        mnuusuariosregistrados1.add(jCheckBoxMenuItem1);
+
+        jCheckBoxMenuItem2.setSelected(true);
+        jCheckBoxMenuItem2.setText("Idiomas Extrangeros");
+        mnuusuariosregistrados1.add(jCheckBoxMenuItem2);
+
+        jCheckBoxMenuItem3.setSelected(true);
+        jCheckBoxMenuItem3.setText("Gestion Ambiental");
+        mnuusuariosregistrados1.add(jCheckBoxMenuItem3);
+
+        jCheckBoxMenuItem4.setSelected(true);
+        jCheckBoxMenuItem4.setText("Educacion Superior");
+        mnuusuariosregistrados1.add(jCheckBoxMenuItem4);
+
+        jCheckBoxMenuItem5.setSelected(true);
+        jCheckBoxMenuItem5.setText("Finanzas");
+        mnuusuariosregistrados1.add(jCheckBoxMenuItem5);
+
+        menuBar.add(mnuusuariosregistrados1);
 
         mnuayuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/umss/img/if_Warning_131773.png"))); // NOI18N
         mnuayuda.setText("Ayuda");
@@ -206,6 +238,11 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem4;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem5;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
@@ -216,6 +253,7 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu mnuensayos;
     private javax.swing.JMenu mnuhome;
     private javax.swing.JMenu mnuusuariosregistrados;
+    private javax.swing.JMenu mnuusuariosregistrados1;
     private javax.swing.JMenuItem pasteMenuItem;
     private javax.swing.JDesktopPane principal;
     // End of variables declaration//GEN-END:variables

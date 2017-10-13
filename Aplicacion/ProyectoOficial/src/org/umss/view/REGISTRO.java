@@ -101,6 +101,11 @@ public class REGISTRO extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         jButton2.setText("TERMINAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 545, -1, -1));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(251, 103, 173, -1));
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(251, 163, 173, -1));
@@ -124,7 +129,7 @@ public class REGISTRO extends javax.swing.JFrame {
         });
         jPanel1.add(CARGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(251, 414, 160, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo-de-la-luna.jpg"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/umss/img/imagen-suave-con-swooshes-fondo-abstracto_91-6107 (1).jpg"))); // NOI18N
         jLabel9.setText("jLabel9");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 600));
 
@@ -153,10 +158,14 @@ public class REGISTRO extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    //Desarollo_Sprint pi = new Desarollo_Sprint();
-     // pi.setVisible(true);
+    menuPrincipal menu = new menuPrincipal();
+      menu.setVisible(true);
       dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
