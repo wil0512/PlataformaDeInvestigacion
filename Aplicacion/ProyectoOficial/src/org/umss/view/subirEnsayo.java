@@ -5,15 +5,17 @@
  */
 package org.umss.view;
 
+import static java.util.Locale.filter;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 /**
  *
- * @author FAMY
+ * @author FAMY edit for mausho
  */
 public class subirEnsayo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form subirEnsayo
-     */
+    private FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos pdf y word","pdf","docx");
     public subirEnsayo() {
         initComponents();
     }
@@ -31,7 +33,7 @@ public class subirEnsayo extends javax.swing.JFrame {
         botonExaminar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        dirEnsayo = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         tituloEnsayo = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -47,7 +49,12 @@ public class subirEnsayo extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         botonExaminar.setText("Examinar...");
-        getContentPane().add(botonExaminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 100, 30));
+        botonExaminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonExaminarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botonExaminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 100, 30));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Subir Un Nuevo Ensayo");
@@ -55,11 +62,11 @@ public class subirEnsayo extends javax.swing.JFrame {
 
         jLabel3.setText("Subir un ensayo *");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 100, 20));
-        getContentPane().add(dirEnsayo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 200, 20));
+        getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 270, 30));
 
         jLabel4.setText("Titulo");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 70, 30));
-        getContentPane().add(tituloEnsayo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 200, 20));
+        getContentPane().add(tituloEnsayo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 270, 30));
 
         jLabel5.setText("Descripción:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 70, 20));
@@ -68,7 +75,7 @@ public class subirEnsayo extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 270, 130));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 270, 130));
 
         botonAceptar.setText("Aceptar");
         getContentPane().add(botonAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
@@ -81,6 +88,19 @@ public class subirEnsayo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonExaminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonExaminarActionPerformed
+        JFileChooser filechoose = new JFileChooser();
+       filechoose.setFileFilter(filter);
+       int opcion = filechoose.showOpenDialog(this);
+       if(opcion==JFileChooser.APPROVE_OPTION){
+           
+           String nom_arch = filechoose.getSelectedFile().getName();
+           String ruta = filechoose.getSelectedFile().toString();
+           
+           txtNombre.setText(nom_arch);
+       }
+    }//GEN-LAST:event_botonExaminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,7 +140,6 @@ public class subirEnsayo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAceptar;
     private javax.swing.JButton botonExaminar;
-    private javax.swing.JTextField dirEnsayo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -131,5 +150,6 @@ public class subirEnsayo extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField tituloEnsayo;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }
