@@ -43,7 +43,7 @@ public class menuPrincipal extends javax.swing.JFrame {
         mnuayuda = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
-        mnusalir = new javax.swing.JMenu();
+        mnucerrarsesion = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,7 +112,6 @@ public class menuPrincipal extends javax.swing.JFrame {
             }
         });
         mnuensayos.add(jMenuItem4);
-        jMenuItem4.getAccessibleContext().setAccessibleName("SubirEnsayo");
         jMenuItem4.getAccessibleContext().setAccessibleDescription("");
 
         menuBar.add(mnuensayos);
@@ -132,9 +131,9 @@ public class menuPrincipal extends javax.swing.JFrame {
 
         menuBar.add(mnuayuda);
 
-        mnusalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/umss/img/if_Cancel_131742.png"))); // NOI18N
-        mnusalir.setText("Salir");
-        menuBar.add(mnusalir);
+        mnucerrarsesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/umss/img/cierre-de-sesion-icono-4342-32.png"))); // NOI18N
+        mnucerrarsesion.setText("Cerrar Sesion");
+        menuBar.add(mnucerrarsesion);
 
         setJMenuBar(menuBar);
 
@@ -213,9 +212,9 @@ public class menuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu mnuayuda;
+    private javax.swing.JMenu mnucerrarsesion;
     private javax.swing.JMenu mnuensayos;
     private javax.swing.JMenu mnuhome;
-    private javax.swing.JMenu mnusalir;
     private javax.swing.JMenu mnuusuariosregistrados;
     private javax.swing.JMenuItem pasteMenuItem;
     private javax.swing.JDesktopPane principal;
