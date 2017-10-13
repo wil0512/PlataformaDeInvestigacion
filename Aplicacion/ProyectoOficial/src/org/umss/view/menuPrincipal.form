@@ -109,7 +109,6 @@
                 <Property name="text" type="java.lang.String" value="SubirEnsayo"/>
               </Properties>
               <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="SubirEnsayo"/>
                 <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
               </AccessibilityProperties>
               <Events>
@@ -150,12 +149,12 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="mnusalir">
+        <Menu class="javax.swing.JMenu" name="mnucerrarsesion">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/org/umss/img/if_Cancel_131742.png"/>
+              <Image iconType="3" name="/org/umss/img/cierre-de-sesion-icono-4342-32.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Salir"/>
+            <Property name="text" type="java.lang.String" value="Cerrar Sesion"/>
           </Properties>
         </Menu>
       </SubComponents>
