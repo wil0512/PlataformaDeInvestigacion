@@ -78,6 +78,11 @@ public class subirEnsayo extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 270, 130));
 
         botonAceptar.setText("Aceptar");
+        botonAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAceptarActionPerformed(evt);
+            }
+        });
         getContentPane().add(botonAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
         jLabel6.setText("*  Obligatorio");
@@ -101,6 +106,10 @@ public class subirEnsayo extends javax.swing.JFrame {
            txtNombre.setText(nom_arch);
        }
     }//GEN-LAST:event_botonExaminarActionPerformed
+
+    private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAceptarActionPerformed
 
     /**
      * @param args the command line arguments

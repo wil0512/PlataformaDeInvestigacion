@@ -128,14 +128,29 @@ public class menuPrincipal extends javax.swing.JFrame {
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("Comercio Exterior");
+        jCheckBoxMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem1ActionPerformed(evt);
+            }
+        });
         mnuusuariosregistrados1.add(jCheckBoxMenuItem1);
 
         jCheckBoxMenuItem2.setSelected(true);
         jCheckBoxMenuItem2.setText("Idiomas Extrangeros");
+        jCheckBoxMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem2ActionPerformed(evt);
+            }
+        });
         mnuusuariosregistrados1.add(jCheckBoxMenuItem2);
 
         jCheckBoxMenuItem3.setSelected(true);
         jCheckBoxMenuItem3.setText("Gestion Ambiental");
+        jCheckBoxMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem3ActionPerformed(evt);
+            }
+        });
         mnuusuariosregistrados1.add(jCheckBoxMenuItem3);
 
         jCheckBoxMenuItem4.setSelected(true);
@@ -197,6 +212,21 @@ public class menuPrincipal extends javax.swing.JFrame {
         subirEnsayo obj = new subirEnsayo();
         obj.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
+        cursosDisponibles cursos = new cursosDisponibles();
+        cursos.setVisible(true);
+    }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
+
+    private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
+        cursosDisponibles1 cursos1 = new cursosDisponibles1();
+        cursos1.setVisible(true);
+    }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
+
+    private void jCheckBoxMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem3ActionPerformed
+        cursosDisponibles2 cursos2 = new cursosDisponibles2();
+        cursos2.setVisible(true);
+    }//GEN-LAST:event_jCheckBoxMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
